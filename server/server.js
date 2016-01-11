@@ -11,15 +11,19 @@ server.use(express.static(__dirname + '/../client'));
 server.use(bodyParser.json()); 
 
 server.use(function(req, res, next){
-  console.log("middleware! here is the data ", req.body);
+  //console.log("middleware! here is the data ", req.body);
   next();
 });
 
 
-
+//Express Routes
 server.get('/data', function(req, res, next){
-  console.log('Received GET request for /data');
-
+  //console.log('\n\nRECIEVED GET REQUEST FOR DATA:\n\n');
+  //get posts from MongoDB
+  db.getPosts().then(function(data){
+    console.log(data);
+    res.status(200).send(data);
+  })
 })
 .get('/', function(req, res, next){
   console.log('Received GET request for /');

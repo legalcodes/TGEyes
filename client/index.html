@@ -5,9 +5,14 @@
   <script type="text/javascript" src="posts.js"></script>
 </head>
 <body ng-app="TGEyes">
-  <h1>Here's the index!</h1>
+  <h1>Welcome to TGEyes!</h1>
+  <h4>Scrape your favorite bootcamper blogs, and view them in a convenient list!</h4>
+
+
+
+
   <div ng-controller="postController">
-    {{ display }}
+    <ul ng-repeat="post in data"></ul>
   </div>
 
 

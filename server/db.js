@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/myapp');
+mongoose.connect('mongodb://localhost/tgeyes');
 
 var db = mongoose.connection; 
 var Post;
@@ -27,12 +27,12 @@ db.once('open', function(){
 
   post.save(function(err, post){
     if (err) return console.error(err); 
-    console.log('promised saved post', post);
+    //console.log('promised saved post', post);
     return post;
   })
   .then(function(post){
     post.find().then(function(posts){
-      console.log(posts);
+      //console.log(posts);
     })
   })
 
@@ -41,33 +41,32 @@ db.once('open', function(){
     return Post.find({}, function(err, data){
       if(err){ console.log(err)} 
       else {
-        return data
+        return data;
       }
-
     })
   }
 
-  exports.savePost = function(postObj){
-    console.log('POST STORED', postObj);
+  // exports.savePost = function(postObj){
+  //   console.log('POST STORED', postObj);
 
-    var post = new Post(postObj); 
+  //   var post = new Post(postObj); 
 
-    post.save(function(err, post){
-      if (err) return console.error(err);
-      console.log('promised save of post', post);
-      return post;
-    })
-    .then(function(post){
-      post.find().then(function(posts){
-        console.log(posts);
-      })
-    })
+  //   post.save(function(err, post){
+  //     if (err) return console.error(err);
+  //     console.log('promised save of post', post);
+  //     return post;
+  //   })
+  //   .then(function(post){
+  //     post.find().then(function(posts){
+  //       console.log(posts);
+  //     })
+  //   })
 
-  }
+  })
 
 
 
-})
+// })
 
 
 
