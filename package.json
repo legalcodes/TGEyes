@@ -1,0 +1,13 @@
+{
+  "name": "TGEyes", 
+  "version": "1.0.0", 
+  "description": "Scrape and list blogs from coding bootcampers!", 
+  "author": "Jon Tippens", 
+  "license": "ISC", 
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.5",
+    "morgan": "^1.6.1"
+  } 
+}
