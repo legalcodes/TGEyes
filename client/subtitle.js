@@ -8,11 +8,12 @@ TGEyes.controller('subtitle', ['$scope', function($scope){
   3: "You were there. You heard of them first." ,
   4: "Keep \"tabs\" on your friends' blogs." ,
   5: "Certified. Collated. Convenient.", 
-  6: "The blog app that cares." 
+  6: "The blog app that cares.",
+  7: "A blog of blogs."
 };
   
   $scope.randomize = function(){
-    var random = Math.floor(Math.random() * 6) + 1;
+    var random = Math.floor(Math.random() * 7) + 1;
     $scope.test = $scope.list[random];
   };
 

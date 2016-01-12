@@ -1,4 +1,11 @@
-    <div ng-repeat="post in data">
+<div class="row-fluid">
+  
+  <div class="span1">
+  </div >
+
+
+  <div class="span10">
+    <div ng-repeat="post in data" >
       <div class="well">
         <span><h3>{{ post.title }}</h3></span>
         <span>{{ post.blogName }}</span>
@@ -6,5 +13,10 @@
         <div><p class="lead">{{ post.text }}</p></div>      
       </div>
     </div>
-    
+  </div>
+
+  <div class="span1">
+  </div >
+
+</div>
     
