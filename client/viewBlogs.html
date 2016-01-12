@@ -5,11 +5,12 @@
 
 
   <div class="span10">
-    <div ng-repeat="post in data" >
+    <div ng-repeat="blog in data" >
       <div class="well">
-        <span><h3>{{ post.title }}</h3></span>
-        <span>{{ post.blogName }}</span>
-        <span>{{ post.blogger }}</span>
+        <span><h3>{{ blog.name }}</h3></span>
+        <span>{{ blog.url }}</span>
+        <span>{{ blog.author }}</span>
+        <span>{{ blog.posts }}</span>
         <div><p class="lead">{{ post.text }}</p></div>      
       </div>
     </div>

@@ -2,35 +2,26 @@
     
     <!-- <div>{{ addText }}</div> -->
 <div class="row-fluid">
-  
   <div class="span4"></div >
-    
   <div class="span4">
     
-    <form>
-      
+    <form id="blogForm">
       <ul>
-        <li>
-      Author: <input name="Author:"></input>
-        </li>
-        <li>
-      Blog Title: <input name="Blog Title:"></input>
-        </li>
-      <h3>TAGS || CLASSES</h3>
-
-        <li>
-      URL: <input name="Url"></input>
-        </li>
-        <li>
-      Post Tag/Class<input name="Blogpost Tag/Class"></input>
-        </li>
-        <li>
-      Text Tag/Class<input name="Blogtext Tag/Class"></input>
-        </li>      
+        <li>Author: <input ng-model="blog.author"></input></li>
+        <li>Blog Name: <input ng-model="blog.name"></input></li>
+          <h3>TAGS || CLASSES</h3>
+        <li>URL: <input ng-model="blog.url"></input></li>
+        <li>Post Tag/Class<input ng-model="blog.posts"></input></li>
+        <!-- <li>Text Tag/Class<input name="Blogtext Tag/Class"></input></li> -->      
       </ul>
-
     </form>
   
+    <div class="col-md-4 text-center"> 
+    
+      <button class="btn btn-primary center-block" ng-click="storeBlog(blog)">Add Blog</button>
+    
+    </div>
+
   </div>
 
   <div class="span4"></div>

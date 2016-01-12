@@ -18,34 +18,55 @@ TGEyes.config(function($stateProvider, $urlRouterProvider){
 
 TGEyes.controller('postController', ['$scope', 'PostFactory', function($scope, PostFactory){
   
-
   $scope.data = [];
-
-
-  $scope.addText = "SCOPE DISPLAY WORKING";
-  $scope.viewText = "ADD BLOG IS WORKING";
+  $scope.blog = {
+    author: "",
+    url: "",
+    name: "",
+    posts: []
+  };
   
-  $scope.fetchPosts = function(){
-    PostFactory.getPosts()
+  $scope.fetchBlogs = function(){
+    PostFactory.getBlogs()
       .then(function(data){
         $scope.data = data;
-        console.log($scope.data);
-        console.log('\n\n\nfetchedPosts from controller!!!!!\n\n\n');
+        //console.log($scope.data);
+        //console.log('\n\n\nfetchedBlogs from controller!!!!!\n\n\n');
       })
   }
 
-  $scope.fetchPosts();
+  $scope.storeBlog = function(blog){
+    //console.log(blog);
+    PostFactory.saveBlog(blog)
+      .then(function(data){
+        //console.log('\n\n\nstoreBlog called from posts.js', blog, '\n\n\n');
+      })
+  }
+
+  $scope.fetchBlogs();
 
 }])
 
 
+
+
+
+
+
 TGEyes.factory('PostFactory', ['$http', function($http){
   return {
-    getPosts: function(){
+    getBlogs: function(){
       return $http.get('http://localhost:3000/data').then(function(res){
-        console.log(res);
+        //console.log(res);
         return res.data;
-      });
+      });      
+    },
+    saveBlog: function(blog){
+      console.log(blog);
+      return $http.post('http://localhost:3000/data', blog).then(function(res){
+        //console.log(res);
+        return res;
+      })
     }
   }
 }])

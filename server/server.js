@@ -20,15 +20,17 @@ server.use(function(req, res, next){
 server.get('/data', function(req, res, next){
   //console.log('\n\nRECIEVED GET REQUEST FOR DATA:\n\n');
   //get posts from MongoDB
-  db.getPosts().then(function(data){
-    console.log(data);
+  db.getBlogs().then(function(data){
+    //console.log(data);
     res.status(200).send(data);
   })
 })
 .get('/', function(req, res, next){
-  console.log('Received GET request for /');
+  //console.log('Received GET request for /');
 })
-
+.post('/data', function(req, res, next){ 
+  db.saveBlog(req.body);
+})
 
 
 server.listen(port);
