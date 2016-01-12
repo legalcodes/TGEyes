@@ -8,6 +8,7 @@
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "mongoose": "^4.3.5",
-    "morgan": "^1.6.1"
+    "morgan": "^1.6.1",
+    "x-ray": "^2.0.3"
   }
 }

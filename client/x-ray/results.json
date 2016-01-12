@@ -1,0 +1,22 @@
+[
+  {
+    "title": "jQuery CSS Selectors",
+    "text": "References:",
+    "url": "https://ksiddana.github.io/jQuery%20Selectors/"
+  },
+  {
+    "title": "Backbone Soundcloud Example",
+    "text": "Initially I would say, start off by building small applications in Backbone, such as a an API, that is similar to a jQuery AJAX call to an external API. In this example I am going to walk you through some sample code to get you started by building a Single Page Application that brings up the Titles from your Soundcloud Account. ",
+    "url": "https://ksiddana.github.io/Backbone%20Tutorials/"
+  },
+  {
+    "title": "Backbone Introduction",
+    "text": "Your probably wondering, why do we have to write so much code for displaying HTML elements that don't currently have a feature rich component. These are called single page applications. Backbone consists of building web pages using the following architectures:",
+    "url": "https://ksiddana.github.io/Introduction%20Backbone/"
+  },
+  {
+    "title": "You're up and running!",
+    "text": "Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).",
+    "url": "https://ksiddana.github.io/Hello-World/"
+  }
+]
