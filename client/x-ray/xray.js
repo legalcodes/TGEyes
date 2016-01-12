@@ -2,10 +2,6 @@ var Xray = require('x-ray');
 
 var xray = new Xray();
 
-// xray('https://ksiddana.github.io/', 'h1', [{
-//   h1: ''
-// }])
-//   .write('results.json');
 
 xray('https://ksiddana.github.io/', '.post', [{
   title: 'a', 
@@ -14,6 +10,16 @@ xray('https://ksiddana.github.io/', '.post', [{
 
 }])
   .write('results.json');
+
+
+
+
+
+
+
+
+
+
 
 
 
