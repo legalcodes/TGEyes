@@ -1,21 +1,29 @@
 var Xray = require('x-ray');
-
 var xray = new Xray();
 
+
+var url = 'https://ksiddana.github.io/'
+var postTag = '.post'
+
+
+xray(url, postTag, [{
+    title: 'a',
+    text: 'p', 
+    url: xray('a', '@href')
+  }])
+
+
+
+/*
 
 xray('https://ksiddana.github.io/', '.post', [{
   title: 'a', 
   text: 'p', 
   url: xray('a', '@href')
-
 }])
   .write('results.json');
 
-
-
-
-
-
+*?
 
 
 

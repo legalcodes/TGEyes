@@ -7,18 +7,18 @@
     
     <form id="blogForm">
       <ul>
-        <li>Author: <input ng-model="blog.author"></input></li>
-        <li>Blog Name: <input ng-model="blog.name"></input></li>
+        <li><input ng-model="blog.author"></input> Author</li><br>
+        <li><input ng-model="blog.name"></input> Blog Name</li><br>
           <h3>TAGS || CLASSES</h3>
-        <li>URL: <input ng-model="blog.url"></input></li>
-        <li>Post Tag/Class<input ng-model="blog.posts"></input></li>
-        <!-- <li>Text Tag/Class<input name="Blogtext Tag/Class"></input></li> -->      
+        <li><input ng-model="blog.url"></input> URL</li><br>
+        <li><input ng-model="tags.post"></input> Post Tag/Class</li><br>
+        <li><input ng-model="tags.text"></input> Text Tag/Class</li><br>
       </ul>
     </form>
   
     <div class="col-md-4 text-center"> 
     
-      <button class="btn btn-primary center-block" ng-click="storeBlog(blog)">Add Blog</button>
+      <button class="btn btn-primary center-block" ng-click="storeBlog(blog, tags)">Add Blog</button>
     
     </div>
 
