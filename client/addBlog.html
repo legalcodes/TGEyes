@@ -7,11 +7,11 @@
     
     <form id="blogForm">
       <ul>
-        <li><input ng-model="blog.author"></input> Author</li><br>
-        <li><input ng-model="blog.name"></input> Blog Name</li><br>
+        <li><div>Author</div><div><input ng-model="blog.author"></input></div></li>
+        <li><div>Blog Name</div><div><input ng-model="blog.name"></input></div></li>
           <h3>TAGS || CLASSES</h3>
-        <li><input ng-model="blog.url"></input> URL</li><br>
-        <li><input ng-model="tags.post"></input> Post Tag/Class</li><br>
+        <li><div>URL</div><div><input ng-model="blog.url"></input></div></li>
+        <li><div>Post Tag/Class</div><div><input ng-model="tags.post"></input></div></li>
         <li><input ng-model="tags.text"></input> Text Tag/Class</li><br>
       </ul>
     </form>
