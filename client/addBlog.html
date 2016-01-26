@@ -2,30 +2,28 @@
     
     <!-- <div>{{ addText }}</div> -->
 <div class="row-fluid">
-  <div class="span4"></div >
-  <div class="span4">
-    
-    <form id="blogForm">
-      <ul>
-        <li><div>Author</div><div><input ng-model="blog.author"></input></div></li>
-        <li><div>Blog Name</div><div><input ng-model="blog.name"></input></div></li>
-          <h3>TAGS || CLASSES</h3>
-        <li><div>URL</div><div><input ng-model="blog.url"></input></div></li>
-        <li><div>Post Tag/Class</div><div><input ng-model="tags.post"></input></div></li>
-        <li><input ng-model="tags.text"></input> Text Tag/Class</li><br>
-      </ul>
-    </form>
   
-    <div class="col-md-4 text-center"> 
-    
-      <button class="btn btn-primary center-block" ng-click="storeBlog(blog, tags)">Add Blog</button>
-    
+  <div class="span4"></div >
+  
+  <center>
+    <div class="span4">
+      <form id="blogForm">
+        <ul>
+          <li><div>Author</div><div><input ng-model="blog.author"></input></div></li>
+          <li><div>Blog Name</div><div><input ng-model="blog.name"></input></div></li>
+            <h3>TAGS || CLASSES</h3>
+          <li><div>URL</div><div><input ng-model="blog.url"></input></div></li>
+          <li><div>Post Tag/Class</div><div><input ng-model="tags.post"></input></div></li>
+          <li><div>Text Tag/Class</div><div><input ng-model="tags.text"></input></div></li><br>
+        </ul>
+      </form>
+
+      <div class="col-md-4 text-center"> 
+        <button class="btn btn-primary center-block" ng-click="storeBlog(blog, tags)">Add Blog</button>    
+      </div>
     </div>
-
-  </div>
-
+  </center>
   <div class="span4"></div>
-
 <div
   
 
