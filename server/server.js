@@ -18,18 +18,15 @@ server.use(function(req, res, next){
 });
 
 
-//Express Routes
 server.get('/data', function(req, res, next){
-  //console.log('\n\nRECIEVED GET REQUEST FOR DATA:\n\n');
-  //get posts from MongoDB
   db.getBlogs().then(function(data){
-    //console.log(data);
     res.status(200).send(data);
   })
 })
+
 .get('/', function(req, res, next){
-  //console.log('Received GET request for /');
 })
+
 .post('/data', function(req, res, next){ 
   db.saveBlog(req.body);
 })
@@ -41,13 +38,8 @@ server.get('/data', function(req, res, next){
   
   console.log('\n\n\nXRAY VARIABLES:', url, postTag.post, textTag.text, '\n\n\n')
 
-  // res.status(200).send(xray('https://ksiddana.github.io/', '.post', [{
-  //   title: 'a',
-  //   text: 'p', 
-  //   url: xray('a', '@href')
-  // }]).write());
 
-  xray('https://ksiddana.github.io/', '.post', [{
+  xray(url, postTag.post, [{
     title: 'a',
     text: 'p', 
     url: xray('a', '@href')

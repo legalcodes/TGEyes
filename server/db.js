@@ -50,17 +50,17 @@ db.once('open', function(){
 
   Blog = mongoose.model('Blog', BlogSchema);
 
-  var blog = new Blog({
-    name: 'Raph Blog',
-    url: 'http://raphaelbaskerville.github.io/',
-    author: 'Raphael Baskerville',
-    posts: []
-  })
+  // var blog = new Blog({
+  //   name: 'Raph Blog',
+  //   url: 'http://raphaelbaskerville.github.io/',
+  //   author: 'Raphael Baskerville',
+  //   posts: []
+  // })
 
-  blog.save(function(err, blog){
-    if (err) return console.error(err);
-    return blog;
-  })
+  // blog.save(function(err, blog){
+  //   if (err) return console.error(err);
+  //   return blog;
+  // })
 
   // exports.getPosts = function(){
   //   //must return a promise

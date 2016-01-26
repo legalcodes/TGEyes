@@ -7,11 +7,18 @@
   <div class="span10">
     <div ng-repeat="blog in data" >
       <div class="well">
-        <div><h3>{{ blog.name }}</h3></div>
-        <span>{{ blog.posts }}</span>
-        <!-- <div><p class="lead">{{ blog.posts[0].text }}</p></div> -->
-        <!-- <span>{{ blog.posts }}</span> -->
-       <!--  <div><p class="lead">{{ post.text }}</p></div>      -->
+        <div><h3>{{ blog.name }}</h3>by {{ blog.author }}</div>
+        <ul>
+        
+          <li ng-repeat="post in blog.posts">
+            <a href="{{ post.url }}">
+              <h3>{{ post.title }}</h3>
+            </a>
+            <p>{{ post.text }}</p>
+          </li>
+
+        </ul>
+        
       </div>
     </div>
   </div>

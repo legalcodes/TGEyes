@@ -1,5 +1,6 @@
 
 var TGEyes = angular.module('TGEyes', ["ui.router"]);
+
 TGEyes.config(function($stateProvider, $urlRouterProvider){
   //send unmatched urls to blogList
   $urlRouterProvider.otherwise("/viewBlogs")
@@ -28,6 +29,13 @@ TGEyes.controller('postController', ['$scope', 'PostFactory', function($scope, P
     posts: []
   };
 
+  $scope.blogInput = {
+    author: "",
+    url: "",
+    name: "",
+    posts: []
+  };
+
   $scope.tags = {
     post: "",
     text: ""
@@ -43,10 +51,10 @@ TGEyes.controller('postController', ['$scope', 'PostFactory', function($scope, P
   $scope.fetchBlogs = function(){
     PostFactory.getBlogs()
       .then(function(data){
-        $scope.data = data;
+        for (var i = 0; i < data.length; i++){
+          $scope.data.push(data[i]);
+        }
         console.log($scope.data);
-        //console.log($scope.data);
-        //console.log('\n\n\nfetchedBlogs from controller!!!!!\n\n\n');
       })
   }
 
